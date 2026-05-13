@@ -1,1 +1,1 @@
--- Comenzamos a subir de manera automatica el archivo a GitHub cada vez que se guarde-- Reservado para todo lo referente a la pestaña RAID
+-- Reservado para todo lo referente a la pestaña RAID
