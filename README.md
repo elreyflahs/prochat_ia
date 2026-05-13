@@ -1,2 +1,4 @@
-# prochat_ia
+# ProChat IA
 Version mejorada de ProChat
+Un addon para World of warcraft en Wrath of the lich king 3.3. que maneje los mensajes de los canales generales de manera sana y anote al jugador en el buscador de bandas con datos importantes (PESTAÑA LFG), que los lideres de raids puedan comenzar a armar su raid mas rápido y con datos puntuales y necesarios (pestaña LFM), donde una vez tengan armada la raid puedan monitorear la información de la raid que aparece en la ventana de chat como drops, tiempo de drops, reglas, anuncios, links, streams  (Pestaña RAID) y que quede registrado datos importantes del chat como por ejemplo: El Chat de la raid, mensajes del lider, mensajes de looteo, dados (pestaña REG). Todo lo necesario para que la jugabilidad mejore sin tener que dejar de usar el chat que es lo que a predominado durante décadas en 3.3.5
+Actualmente en desarrollo
