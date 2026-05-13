@@ -71,6 +71,9 @@ function ProChat.Locales:SetLanguage(lang)
         ProChat.L["ALERTA_BANDA"] = "|cffB366FFPro|r|cffFFFFFFChat|r |cff00FFCCIA|r: |cffFF0000¡Alerta!|r Si alteras cualquier valor no podré mostrar tu personaje en LFM."
         ProChat.L["LFM_REFRESH"] = "Actualizar"
         ProChat.L["PARTY_REQUEST"] = "Pedir Party"
+        ProChat.L["FAV_FIRST"] = "Favoritos primero"
+        ProChat.L["FAV_FIRST_DESC"] = "Mostrar favoritos al tope de cada lista."
+        ProChat.L["FAV_TITLE"] = "Favoritos"
     else
         ProChat.L["LANG_NAME"] = "Eng"
         ProChat.L["LANG_CHANGED"] = "English! Awesome!, Hi! :D"
@@ -122,5 +125,8 @@ function ProChat.Locales:SetLanguage(lang)
         ProChat.L["ALERTA_BANDA"] = "|cffB366FFPro|r|cffFFFFFFChat|r |cff00FFCCIA|r: |cffFF0000Alert!|r If you alter any value I won't be able to show your character in LFM."
         ProChat.L["LFM_REFRESH"] = "Refresh"
         ProChat.L["PARTY_REQUEST"] = "Request Party"
+        ProChat.L["FAV_FIRST"] = "Favs First"
+        ProChat.L["FAV_FIRST_DESC"] = "Show favorites at the top of each list."
+        ProChat.L["FAV_TITLE"] = "Favorites"
     end
 end
