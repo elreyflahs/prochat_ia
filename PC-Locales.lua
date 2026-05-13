@@ -1,0 +1,126 @@
+-- ProChat IA v1.0 - 3.3.5 - Locales Module
+-- Por Elreyflahs
+
+ProChat.Locales = {}
+
+-- Initialize locale table
+ProChat.L = {}
+
+-- ===== INITIALIZE LANGUAGE FUNCTION =====
+function ProChat.Locales:InitializeLanguage()
+    if ProChatDB and ProChatDB.lang then return end
+    
+    local clientLocale = _G.GetLocale()
+    if clientLocale == "esES" or clientLocale == "esMX" then
+        ProChatDB.lang = "es"
+    else
+        ProChatDB.lang = "en"
+    end
+end
+
+-- ===== SET LANGUAGE STRINGS =====
+function ProChat.Locales:SetLanguage(lang)
+    if lang == "es" then
+        ProChat.L["LANG_NAME"] = "Esp"
+        ProChat.L["LANG_CHANGED"] = "¡Español! ¡Excelente!, ¡Hola! :D"
+        ProChat.L["TIME_CHANGED"] = "¡Entendido! He ajustado el tiempo por mensaje a "
+        ProChat.L["SELECT_CHAN"] = "Seleccionar canales:"
+        ProChat.L["SELECT_DUNGEON"] = "Seleccionar mazmorra:"
+        ProChat.L["SELECT_SPAM"] = "Tiempo por msg:"
+        ProChat.L["SLIDER_TEXT"] = "Texto"
+        ProChat.L["SEARCH_LABEL"] = ":Buscar"
+        ProChat.L["CLEAN_BTN"] = "Limpiar"
+        ProChat.L["HIDE_GRAYS"] = "Ocultar Spam"
+        ProChat.L["SHOW_LEADERS"] = "Raids Activas"
+        ProChat.L["CHANNELS_TEXT"] = "Canales"
+        ProChat.L["OPTIONS_CHECK"] = "Opciones"
+        ProChat.L["DUNGEONS_TEXT"] = "Mazmorras"
+        ProChat.L["ALL_TEXT"] = "TODAS"
+        ProChat.L["START_MSG"] = "¡Estoy lista!. Mi versión es"
+        ProChat.L["STATUS_TXT"] = "y mi estado actual: |cff00ff00¡Actualizada!|r."
+        ProChat.L["COMBAT_MSG"] = "¡Cuidado! He minimizado la ventana por que has entrado en combate."
+        ProChat.L["WELCOME_TITLE"] = "|cffA335EE¡Gracias por descargar ProChat IA!|r"
+        ProChat.L["WELCOME_TEXT"] = "Tu asistente intenligente de búsqueda de mazmorras y filtro de chat ha sido instalado correctamente.\n\nEstado: |cff00ff00Addon Actualizado|r\nVersión: |cffFFD100"
+        ProChat.L["WELCOME_BTN"] = "Comenzar"
+        ProChat.L["CREDITS_TITLE"] = "|cffA335EECréditos y Comandos de ProChat IA|r"
+        ProChat.L["CREDITS_TEXT"] = "Creado por |cffffffffEl Rey Flahs|r.\n\n|cffFFFF00COMANDOS DISPONIBLES:|r\n\n|cffFFD100/pc|r o |cffFFD100/prochat|r\nUsa este comando para abrir o cerrar el panel principal.\n\n|cffFFD100/pc reset|r\nRestablece ventanas, tamaños y muestra la bienvenida.\n\n|cff00ff00Repositorio:|r github.com/elreyflahs/ProChat"
+        ProChat.L["CREDITS_BTN"] = "Cerrar"
+        ProChat.L["RESET_MSG"] = "Reset completo. He reiniciado todo a su estado original."
+        ProChat.L["MINIMAP_TIP"] = "Click: Mostrar/Ocultar\nArrastrar: Mover icono"
+        ProChat.L["TAB_LFG"] = "LFG"
+        ProChat.L["TAB_LFM"] = "LFM"
+        ProChat.L["TAB_RAID"] = "RAID"
+        ProChat.L["TAB_REG"] = "REG"
+        ProChat.L["MINIMIZE_TIP"] = "Minimizar ProChat IA"
+        ProChat.L["MAXIMIZE_TIP"] = "Maximizar ProChat IA"
+        ProChat.L["MINIMIZE_BTN"] = "_"
+        ProChat.L["MAXIMIZE_BTN"] = "[]"
+        ProChat.L["WEEKLY_TEXT"] = "SEMANAL"
+        ProChat.L["APUNTAR_BTN"] = "Apuntar"
+        ProChat.L["APUNTAR_TOOLTIP_TITLE"] = "|cffA335EEApuntar a Cola|r"
+        ProChat.L["APUNTAR_TOOLTIP_DESC"] = "Haz clic para apuntarte a las mazmorras seleccionadas."
+        ProChat.L["NO_ROLE_SELECTED"] = "¡Espera! Necesitas elegir al menos un rol (Tanque, Healer o DPS) antes de apuntarte."
+        ProChat.L["NO_DUNGEONS_SELECTED"] = "No hay mazmorras seleccionadas para apuntarse."
+        ProChat.L["QUEUED_MSG"] = "Te he colocado en la lista de jugadores buscando Raids de ProChat IA para las mazmorras que has seleccionado"
+        ProChat.L["MAZMORRAS"] = "mazmorra(s)."
+        ProChat.L["QUITAR_BTN"] = "Quitarme"
+        ProChat.L["LEAVE_QUEUE_MSG"] = "Te has quitado de la cola."
+        ProChat.L["COMMENT_WARN_1"] = "Te advierto, yo genero un comentario automático con los datos de tu personaje. Si lo modificas, no mostraré tu personaje en la lista de LFM porque ya no sería confiable para otros jugadores."
+        ProChat.L["COMMENT_WARN_2"] = "Recuerda que yo genero un comentario automático con los datos de tu personaje. Si lo modificas, no mostraré tu personaje en la lista de LFM porque ya no sería confiable para otros jugadores."
+        ProChat.L["COMMENT_WARN_BTN"] = "Recuerda lo que te he dicho: No edites o alteres los comentarios que yo genero en esta área o no podré mostrar tu personaje en la pestaña LFM por seguridad."
+        ProChat.L["ALERTA_BANDA"] = "|cffB366FFPro|r|cffFFFFFFChat|r |cff00FFCCIA|r: |cffFF0000¡Alerta!|r Si alteras cualquier valor no podré mostrar tu personaje en LFM."
+        ProChat.L["LFM_REFRESH"] = "Actualizar"
+        ProChat.L["PARTY_REQUEST"] = "Pedir Party"
+    else
+        ProChat.L["LANG_NAME"] = "Eng"
+        ProChat.L["LANG_CHANGED"] = "English! Awesome!, Hi! :D"
+        ProChat.L["TIME_CHANGED"] = "Got it! I've adjusted the time per message to "
+        ProChat.L["SELECT_CHAN"] = "Select channels:"
+        ProChat.L["SELECT_DUNGEON"] = "Select dungeon:"
+        ProChat.L["SELECT_SPAM"] = "Time per msg:"
+        ProChat.L["SLIDER_TEXT"] = "Text"
+        ProChat.L["SEARCH_LABEL"] = ":Search"
+        ProChat.L["CLEAN_BTN"] = "Clear"
+        ProChat.L["HIDE_GRAYS"] = "Hide Spam"
+        ProChat.L["SHOW_LEADERS"] = "Active Raids"
+        ProChat.L["CHANNELS_TEXT"] = "Channels"
+        ProChat.L["OPTIONS_CHECK"] = "Options"
+        ProChat.L["DUNGEONS_TEXT"] = "Dungeons"
+        ProChat.L["ALL_TEXT"] = "ALL"
+        ProChat.L["START_MSG"] = "I'm ready!. My version is"
+        ProChat.L["STATUS_TXT"] = "and my current status: |cff00ff00Updated!|r."
+        ProChat.L["COMBAT_MSG"] = "Window hidden due to combat."
+        ProChat.L["WELCOME_TITLE"] = "|cffA335EEThanks for downloading ProChat IA!|r"
+        ProChat.L["WELCOME_TEXT"] = "Your intelligent search assistant for dungeons and chat filter has been installed successfully.\n\nStatus: |cff00ff00Addon Updated|r\nVersion: |cffFFD100"
+        ProChat.L["WELCOME_BTN"] = "Start"
+        ProChat.L["CREDITS_TITLE"] = "|cffA335EEProChat IA Credits & Commands|r"
+        ProChat.L["CREDITS_TEXT"] = "Created by |cffffffffElreyflahs|r.\n\n|cffFFFF00AVAILABLE COMMANDS:|r\n\n|cffFFD100/pc|r or |cffFFD100/prochat|r\nUse this command to toggle the main panel.\n\n|cffFFD100/pc reset|r\nResets windows, sizes, and shows the welcome screen.\n\n|cff00ff00Repository:|r github.com/elreyflahs/ProChat"
+        ProChat.L["CREDITS_BTN"] = "Close"
+        ProChat.L["RESET_MSG"] = "Reset complete. Everything has returned to its original state and raids have been collapsed."
+        ProChat.L["MINIMAP_TIP"] = "Click: Show/Hide\nDrag: Move icon"
+        ProChat.L["TAB_LFG"] = "LFG"
+        ProChat.L["TAB_LFM"] = "LFM"
+        ProChat.L["TAB_RAID"] = "RAID"
+        ProChat.L["TAB_REG"] = "REG"
+        ProChat.L["MINIMIZE_TIP"] = "Minimize ProChat"
+        ProChat.L["MAXIMIZE_TIP"] = "Maximize ProChat"
+        ProChat.L["MINIMIZE_BTN"] = "_"
+        ProChat.L["MAXIMIZE_BTN"] = "[]"
+        ProChat.L["WEEKLY_TEXT"] = "WEEKLY"
+        ProChat.L["APUNTAR_BTN"] = "Queue"
+        ProChat.L["APUNTAR_TOOLTIP_TITLE"] = "|cffA335EEQueue for Dungeons|r"
+        ProChat.L["APUNTAR_TOOLTIP_DESC"] = "Click to queue for selected dungeons."
+        ProChat.L["NO_ROLE_SELECTED"] = "Wait! You need to choose at least one role (Tank, Healer or DPS) before queuing."
+        ProChat.L["NO_DUNGEONS_SELECTED"] = "No dungeons selected to queue."
+        ProChat.L["QUEUED_MSG"] = "I've placed you in the ProChat IA Raid searcher list for the following dungeons"
+        ProChat.L["MAZMORRAS"] = "dungeon(s)."
+        ProChat.L["QUITAR_BTN"] = "Leave Queue"
+        ProChat.L["LEAVE_QUEUE_MSG"] = "You have left the queue."
+        ProChat.L["COMMENT_WARN_1"] = "I'm warning you, I generate an automatic comment with your character's data. If you modify it, I won't show your character in the LFM list because it wouldn't be trustworthy for other players."
+        ProChat.L["COMMENT_WARN_2"] = "Remember that I generate an automatic comment with your character's data. If you modify it, I won't show your character in the LFM list because it wouldn't be trustworthy for other players."
+        ProChat.L["COMMENT_WARN_BTN"] = "Remember what I told you: Don't edit or alter the comments I generate in this area or I won't be able to show your character in the LFM tab for security."
+        ProChat.L["ALERTA_BANDA"] = "|cffB366FFPro|r|cffFFFFFFChat|r |cff00FFCCIA|r: |cffFF0000Alert!|r If you alter any value I won't be able to show your character in LFM."
+        ProChat.L["LFM_REFRESH"] = "Refresh"
+        ProChat.L["PARTY_REQUEST"] = "Request Party"
+    end
+end

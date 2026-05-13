@@ -1,0 +1,15 @@
+## Interface: 30300
+## Title: !|cffB366FFPro|r|cffFFFFFFChat|r |cff00FFFFIA|r
+## Notes: Filtro avanzado de chat y buscador de raids. |cffFF0000By|r |cffC79C6EElreyflahs|r
+## Author: El Rey Flahs
+## Version: 1.0
+## SavedVariables: ProChatDB
+
+PC-Data.lua
+PC-Locales.lua
+PC-Utils.lua
+PC-Frames.lua
+PC-Core.lua
+PC-Events.lua
+PC-Files.lua
+!ProChat_IA.lua
